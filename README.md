@@ -3,7 +3,7 @@ Rocketseat Bootcamp Challenge #5 Project
 
 ### App Screen
 
-![Git Stars](https://github.com/keepact/Git-Finder/blob/master/app-screen.png)
+![Git Stars](https://github.com/keepact/Git-Stars-React-Native/blob/master/app-screen.png)
 
 ## React Project
 
@@ -30,4 +30,4 @@ You will see any errors in the console.
 ## Learn More
 
 To learn React, check out the [Bootcamp documentation](https://rocketseat.com.br).<br />
-To see the Challange, check out the [Challange documentation](https://github.com/Rocketseat/bootcamp-gostack-desafio-05#desafio-05-aplica%C3%A7%C3%A3o-com-reactjs).
+To see the Challange, check out the [Challange documentation](https://github.com/Rocketseat/bootcamp-gostack-desafio-06/blob/master/README.md#desafio-06-aplica%C3%A7%C3%A3o-com-react-native).
