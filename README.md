@@ -13,11 +13,11 @@ This challenge was preparatory to development of a Gym application.
 
 ## libs used:
   
- Create-react-app, React-icons, React-router-dom, PropTypes, Styled Components
+ WebView, React-icons, Axios, PropTypes, Styled Components
 
 ## Javascript Project:
  
- React.js
+ React Native
 
 ## Scripts
 
