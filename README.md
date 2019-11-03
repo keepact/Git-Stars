@@ -1,5 +1,5 @@
 # Git-Stars-React-Native
-Rocketseat Bootcamp Challenge #5 Project
+Rocketseat Bootcamp Challenge #6 Project
 
 ### App Screen
 
