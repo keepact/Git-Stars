@@ -4,7 +4,7 @@ Rocketseat Bootcamp Challenge #5 Project
 ### App Screen
 
 <p align="center">
-  <img alt="GitHub language count" src="https://github.com/keepact/Git-Stars-React-Native/blob/master/app-screen.png">
+  <img alt="GitHub language count" src="https://github.com/keepact/Git-Stars-React-Native/blob/master/app-preview.png">
 </p>
 
 ## React Project
