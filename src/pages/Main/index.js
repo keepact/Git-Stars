@@ -64,7 +64,13 @@ export default class Main extends Component {
         this.setState({ loading: false, newUser: '' });
 
         return Alert.alert(
-          'Esse usuário já está cadastrado na sua lista de favoritos'
+          'Duplicate Repository',
+          'User already exist in your list.',
+          [
+            {
+              text: 'OK',
+            },
+          ]
         );
       }
 
@@ -83,7 +89,15 @@ export default class Main extends Component {
     } catch (err) {
       this.setState({ loading: false, newUser: '' });
 
-      return Alert.alert('Esse usuário não existe');
+      return Alert.alert(
+        'User not found',
+        'Maybe you wrote fast, try again :)',
+        [
+          {
+            text: 'OK',
+          },
+        ]
+      );
     }
 
     Keyboard.dismiss();
@@ -106,7 +120,7 @@ export default class Main extends Component {
   };
 
   static navigationOptions = {
-    title: 'Usuários',
+    title: 'Git Stars',
   };
 
   render() {
@@ -118,7 +132,7 @@ export default class Main extends Component {
           <Input
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Adicionar usuário"
+            placeholder="Add a user"
             value={newUser}
             onChangeText={text => this.setState({ newUser: text })}
             returnKeyType="send"
