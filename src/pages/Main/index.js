@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Keyboard, ActivityIndicator } from 'react-native';
+import { Keyboard, ActivityIndicator, Alert } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../services/api';
@@ -17,6 +17,8 @@ import {
   Bio,
   ProfileButton,
   ProfileButtonText,
+  ProfileRemoveButton,
+  ProfileButtonRemoveText,
 } from './styles';
 
 export default class Main extends Component {
@@ -53,28 +55,54 @@ export default class Main extends Component {
 
     this.setState({ loading: true });
 
-    const response = await api.get(`/users/${newUser}`);
+    try {
+      const response = await api.get(`/users/${newUser}`);
 
-    const data = {
-      name: response.data.name,
-      login: response.data.login,
-      bio: response.data.bio,
-      avatar: response.data.avatar_url,
-    };
+      const hasUser = users.find(p => p.name === response.data.name);
 
-    this.setState({
-      users: [...users, data],
-      newUser: '',
-      loading: false,
-    });
+      if (hasUser) {
+        this.setState({ loading: false, newUser: '' });
+
+        return Alert.alert(
+          'Esse usuário já está cadastrado na sua lista de favoritos'
+        );
+      }
+
+      const data = {
+        name: response.data.name,
+        login: response.data.login,
+        bio: response.data.bio,
+        avatar: response.data.avatar_url,
+      };
+
+      this.setState({
+        users: [...users, data],
+        newUser: '',
+        loading: false,
+      });
+    } catch (err) {
+      this.setState({ loading: false, newUser: '' });
+
+      return Alert.alert('Esse usuário não existe');
+    }
 
     Keyboard.dismiss();
+
+    return users;
   };
 
   handleNavigate = user => {
     const { navigation } = this.props;
 
     navigation.navigate('User', { user });
+  };
+
+  handleRemove = user => {
+    const { users } = this.state;
+
+    const removeUser = users.filter(u => u.login !== user.login);
+
+    this.setState({ users: removeUser });
   };
 
   static navigationOptions = {
@@ -115,8 +143,12 @@ export default class Main extends Component {
               <Bio>{item.bio}</Bio>
 
               <ProfileButton onPress={() => this.handleNavigate(item)}>
-                <ProfileButtonText>Ver perfil</ProfileButtonText>
+                <ProfileButtonText>See profile</ProfileButtonText>
               </ProfileButton>
+
+              <ProfileRemoveButton onPress={() => this.handleRemove(item)}>
+                <ProfileButtonRemoveText>Remove</ProfileButtonRemoveText>
+              </ProfileRemoveButton>
             </User>
           )}
         />
