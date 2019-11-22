@@ -8,14 +8,20 @@ Project developed during Rocketseat Bootcamp
   <img alt="GitHub language count" src="https://github.com/keepact/Git-Stars-React-Native/blob/master/app-preview.png">
 </p>
 
-## React Project
+## What is this application about?
 
-This challenge was preparatory to development of a Gym application.
+It is a generic App of deliveries. There are 3 screens: 
+
+<strong>1</strong> - Register favorite repository 
+
+<strong>2</strong> - List of your favorites repositories
+
+<strong>3</strong> - Route to Github with Webview
 
 ## libs used:
   
- WebView, React-icons, Axios, PropTypes, Styled Components
-
+ @react-native-community/async-storage, axios, prop-types, react-native-vector-icons, react-navigation, react-navigation-stack, reactotron-react-native, styled-components, eslint, prettier
+ 
 ## Javascript Project:
  
  React Native
@@ -24,7 +30,7 @@ This challenge was preparatory to development of a Gym application.
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn install`
 
 Runs the app in the development mode.<br />
 
