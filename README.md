@@ -20,7 +20,7 @@ It is a App to add your favorite repos on Github. There are 3 screens:
 
 ## libs used:
   
- @react-native-community/async-storage, axios, prop-types, react-native-vector-icons, react-navigation, react-navigation-stack, reactotron-react-native, styled-components, eslint, prettier
+ @react-native-community/async-storage, axios, prop-types, react-native-vector-icons, react-navigation, react-navigation-stack, reactotron-react-native, styled-components, eslint and prettier
  
 ## Javascript Project:
  
