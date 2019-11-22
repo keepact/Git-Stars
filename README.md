@@ -10,7 +10,7 @@ Project developed during Rocketseat Bootcamp
 
 ## What is this application about?
 
-It is a generic App of deliveries. There are 3 screens: 
+It is a App to add your favorite repos on Github. There are 3 screens: 
 
 <strong>1</strong> - Register favorite repository 
 
