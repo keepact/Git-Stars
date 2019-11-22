@@ -12,7 +12,7 @@ Project developed during Rocketseat Bootcamp
 
 It is a App to add your favorite repos on Github. There are 3 screens: 
 
-<strong>1</strong> - Register favorite repository 
+<strong>1</strong> - Registration Page 
 
 <strong>2</strong> - List of your favorites repositories
 
@@ -38,5 +38,4 @@ You will see any errors in the console.
 
 ## Learn More
 
-To learn React, check out the [Bootcamp documentation](https://rocketseat.com.br).<br />
-To see the Challange, check out the [Challange documentation](https://github.com/Rocketseat/bootcamp-gostack-desafio-06/blob/master/README.md#desafio-06-aplica%C3%A7%C3%A3o-com-react-native).
+Doubts? Contact the developer. check out the [Dev Profile](https://github.com/keepact).<br />
